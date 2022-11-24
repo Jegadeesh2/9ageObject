@@ -1,0 +1,54 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>9AgeObject</title>
+  </head>
+  <body>
+    <!-- HTML -->
+
+    <h1 class="container" id="aged"></h1>
+  </body>
+
+  <!-- CSS -->
+
+  <style>
+    body{
+      background-color: lightgray;
+    }
+    .container {
+      position: absolute;
+      top: 50%;
+      left: 50%;
+      transform: translate(-50%, -50%);
+    }
+  </style>
+
+  <!-- SCRIPT -->
+
+  <script>
+    //element
+    let agedEle = document.getElementById('aged');
+    //Objects
+    const objectOne ={
+      name:"Ram",
+      age:25,
+      yuga:"Treta",
+    }
+    const objectTwo ={
+      name:"Krishna",
+      age:31,
+      yuga :"Dwapar",
+    }
+    //Function
+    function comparing(objectOne,objectTwo){
+      if(objectOne.age>objectTwo.age) {
+        return objectOne.name
+      }else{return objectTwo.name}
+    }
+    let name=comparing(objectOne,objectTwo);
+    agedEle.innerText=`${name} is older` 
+  </script>
+</html>
